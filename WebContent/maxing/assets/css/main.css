@@ -1490,9 +1490,9 @@ input, select, textarea {
 		background-image: linear-gradient(top, #008dad, #007b9d);*/
         background-image: url(images/dark.png);
 		display: inline-block;
-		padding: 15px 25px 15px 25px;
+		padding: 5px 9px 5px 9px;
 		background-color: #007b9d;
-		border-radius: 10px;
+		border-radius: 7px;
 		/*text-transform: lowercase;*/
 		text-decoration: none;
 		color: #fff;
