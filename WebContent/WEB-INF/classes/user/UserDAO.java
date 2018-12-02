@@ -1,21 +1,22 @@
 package user;
 
-import User;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+
 public class UserDAO {
-	User tmp = new User();
+
 	private Connection conn;
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
 	public UserDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/BBS";
-			String dbID = "root";
+			String dbURL = "jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
+			String dbID = "kgu123";
 			String dbPassword = "root";
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
