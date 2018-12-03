@@ -26,7 +26,7 @@
 			</tr>
 			<tr>
 				<td>비밀번호</td>
-				<td><input type="pasword" name="passwd" size="10" required>
+				<td><input type="password" name="passwd" size="10" required>
 				<td><input type="submit" value="회원등록"></td>
 			</tr>
 		</table>
