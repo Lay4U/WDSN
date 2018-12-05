@@ -11,7 +11,9 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/animate.css">
+<link rel="stylesheet" href="assets/css/animate.css"/>
+<link rel="stylesheet" href="assets/css/custom.css"/>
+<link rel="stylesheet" href="assets/css/bootstrap.css"/>
 </head>
 <body>
 	<div id="page-wrapper">
@@ -25,7 +27,7 @@
 							<h1>
 								<a href="index.html" id="logo">WebDongSaNy</a>
 							</h1>
-                                    <nav id="nav">
+                                    <nav id="nav" class="navbar-brand">
                                         <a href="index.html" class="current-page-item">홈</a>
                                         <a href="total_search.html">통합검색</a>
                                         <a href="youtube_rcmd.html">유튜브 추천</a>
@@ -68,15 +70,15 @@
 							<h2>검색</h2>
 							<form name=form1 action="https://www.google.co.kr/search?" target="_blank" method=get>
                                 <input class="input" type="text" name="query" value="" placeholder="Google Search">
-                                <button class="button-google">　　　　</button>
+                                <button class="button-google">　　　 　</button>
                             </form>
                             <form name=form1 action="https://search.naver.com/search.naver?" target="_blank" method=get>
                                 <input class="input" type="text" name="query" value="" placeholder="Naver Search">
-                                <button class="button-naver">　　　　</button>
+                                <button class="button-naver">　 　　 　</button>
                             </form>
                             <form name=form1 action="https://search.daum.net/search?" target="_blank" method=get>
                                 <input class="input" type="text" name="q" value="" placeholder="Daum Search">
-                                <button class="button-daum">　　　</button>
+                                <button class="button-daum">　　 　</button>
                             </form>
                         </section>
 					</div>
@@ -279,6 +281,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
 
 </body>
 </html>

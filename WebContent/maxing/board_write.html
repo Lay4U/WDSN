@@ -42,7 +42,7 @@
 				<div id="main">
 					<div class="container">
 						<div class="row main-row">
-							<div class="col-3 col-12-medium">
+							<div class="col-2 col-12-medium">
 
 								<section>
 									<h2>커뮤니티</h2>
@@ -56,57 +56,45 @@
 									</ul>
 								</section>
 							</div>
-                            <div class="col-9 col-9-medium imp-medium container">
+                            <div class="col-10 col-9-medium imp-medium container">
                                 <section class="middle-content">
-									<h2>자유 게시판</h2>
-                                    <p>자유롭게 올리는 게시판입니다.</p>
+									<h2>글 쓰기</h2>
 								</section>
-                                <table class="table table-hover">
-                                    <thread>
-                                    <tr>
-                                        <th>번호</th>
-                                        <th>제목</th>
-                                        <th>작성자</th>
-                                        <th>날짜</th>
-                                        <th>조회수</th>
-                                    </tr>
-                                    </thread>
-                                    <tbody>
-                                        <tr>
-                                            <td>165</td>
-                                            <td><a href="Board_View.jsp">이제 곧 Bootstrap이 멸망합니다.</a></td>
-                                            <td>라이어</td>
-                                            <td>만우절</td>
-                                            <td>777</td>
-                                        </tr>
-                                        <tr>
-                                            <td>164</td>
-                                            <td>부트스트랩 https://hunit.tistory.com/179</td>
-                                            <td>갑자기</td>
-                                            <td>2018.12.03</td>
-                                            <td>333</td>
-                                        </tr>
-                                        <tr>
-                                            <td>163</td>
-                                            <td>자고 싶당</td>
-                                            <td>어느날</td>
-                                            <td>2018.12.03</td>
-                                            <td>111</td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td align="center" colspan="5">1</td>
-                                        </tr>
-                                    </tfoot>
+                                <table>
+                                    <form name="BoardWriteForm" method="post" action="Board_Write_action.jsp" onsubmit="return boardWriteCheck();" >
+                                        <colgroup>
+                                            <col width="20%">
+                                            <col width="80%">
+                                        </colgroup>
+                                        <table class="table">
+                                            <tr>
+                                                <td>작성자</td>
+                                                <td><input type="text" name=name size=10 maxlength=10></td>
+                                            </tr>
+                                            <tr>
+                                                <td>제 목</td>
+                                                <td><input type="text" name=title size=25 maxlength=30></td>
+                                            </tr>
+                                            <tr>
+                                                <td>내 용</td>
+                                                <td><textarea type="content" rows="16" cols="100"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>비밀번호</td>
+                                                <td><input type="password" name=password size=12 maxlength=20></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><div align="center">
+                                                    <input type="submit" value="등록">&nbsp;&nbsp;
+                                                    <input type="button" value="뒤로" onclick="goUrl('community.html');"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </form>
                                 </table>
-                                <p  align="right">
-                                    <input type="button" value="목록" onclick="goUrl('public.html');" />
-                                    <input type="button" value="글쓰기" onclick="goUrl('board_write.html');" />
-                                </p>
-						</div>
-					</div>
-							</div>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 			<!-- Footer -->
 				<div id="footer-wrapper">
@@ -136,6 +124,10 @@
             <script type="text/javascript">
                 function goUrl(url){
                     location.href=url;
+                }
+                function boardWriteCheck(){
+                    var form = document.BoardWriteForm;
+                    return true;
                 }
             </script>
 
