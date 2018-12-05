@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Minimaxing by HTML5 UP
@@ -61,7 +63,7 @@
 									
 								</section>
 						</div>
-						<%include file="bbs.jsp"%>
+						<%@include file="bbs.jsp"%>
 					</div>
 							</div>
 				</div>
@@ -91,3 +93,4 @@
 
 	</body>
 </html>
+
