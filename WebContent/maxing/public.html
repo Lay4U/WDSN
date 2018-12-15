@@ -6,10 +6,12 @@
 -->
 <html>
 	<head>
-		<title>One Column - Minimaxing by HTML5 UP</title>
+		<title>WebDongSaNy</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/custom.css"/>
+        <link rel="stylesheet" href="assets/css/bootstrap.css" />
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -22,7 +24,7 @@
 
 								<header id="header">
 									<h1><a href="index.html" id="logo">WebDongSaNy</a></h1>
-                                    <nav id="nav">
+                                    <nav id="nav" class="navbar-brand">
                                         <a href="index.html">홈</a>
                                         <a href="total_search.html">통합검색</a>
                                         <a href="youtube_rcmd.html">유튜브 추천</a>
@@ -54,11 +56,54 @@
 									</ul>
 								</section>
 							</div>
-                            <div class="col-9 col-9-medium imp-medium">
+                            <div class="col-9 col-9-medium imp-medium container">
                                 <section class="middle-content">
 									<h2>자유 게시판</h2>
                                     <p>자유롭게 올리는 게시판입니다.</p>
 								</section>
+                                <table class="table table-hover">
+                                    <thread>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>제목</th>
+                                        <th>작성자</th>
+                                        <th>날짜</th>
+                                        <th>조회수</th>
+                                    </tr>
+                                    </thread>
+                                    <tbody>
+                                        <tr>
+                                            <td>165</td>
+                                            <td><a href="Board_View.jsp">이제 곧 Bootstrap이 멸망합니다.</a></td>
+                                            <td>라이어</td>
+                                            <td>만우절</td>
+                                            <td>777</td>
+                                        </tr>
+                                        <tr>
+                                            <td>164</td>
+                                            <td>부트스트랩 https://hunit.tistory.com/179</td>
+                                            <td>갑자기</td>
+                                            <td>2018.12.03</td>
+                                            <td>333</td>
+                                        </tr>
+                                        <tr>
+                                            <td>163</td>
+                                            <td>자고 싶당</td>
+                                            <td>어느날</td>
+                                            <td>2018.12.03</td>
+                                            <td>111</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td align="center" colspan="5">1</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <p  align="right">
+                                    <input type="button" value="목록" onclick="goUrl('public.html');" />
+                                    <input type="button" value="글쓰기" onclick="goUrl('board_write.html');" />
+                                </p>
 						</div>
 					</div>
 							</div>
@@ -66,69 +111,6 @@
 			<!-- Footer -->
 				<div id="footer-wrapper">
 					<div class="container">
-						<div class="row">
-							<div class="col-8 col-12-medium">
-
-								<section>
-									<h2>How about a truckload of links?</h2>
-									<div>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-small">
-												<ul class="link-list">
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Suspendisse varius ipsum</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-small">
-												<ul class="link-list">
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Vitae magna sed dolore</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-small">
-												<ul class="link-list">
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Suspendisse varius ipsum</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-small">
-												<ul class="link-list">
-													<li><a href="#">Quis accumsan lorem</a></li>
-													<li><a href="#">Sed neque nisi consequat</a></li>
-													<li><a href="#">Eget et amet consequat</a></li>
-													<li><a href="#">Dapibus sed mattis blandit</a></li>
-													<li><a href="#">Vitae magna sed dolore</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</section>
-
-							</div>
-							<div class="col-4 col-12-medium">
-
-								<section>
-									<h2>Something of interest</h2>
-									<p>Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed.
-									Suspendisse eu varius nibh. Suspendisse vitae magna eget odio amet
-									mollis justo facilisis quis. Sed sagittis mauris amet tellus gravida
-									lorem ipsum dolor sit blandit.</p>
-									<footer class="controls">
-										<a href="#" class="button">Oh, please continue ....</a>
-									</footer>
-								</section>
-
-							</div>
-						</div>
 						<div class="row">
 							<div class="col-12">
 
@@ -149,6 +131,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+            <script src="assets/js/jquery-3.1.1.js"></script>
+            <script src="assets/js/bootstrap.js"></script>
+            <script type="text/javascript">
+                function goUrl(url){
+                    location.href=url;
+                }
+            </script>
 
 	</body>
 </html>

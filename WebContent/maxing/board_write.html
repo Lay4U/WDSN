@@ -4,11 +4,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<script> page import = "java.io.PrintWriter"</script>
-<script> page import = "bbs.BbsDAO" </script>
-<script> page import = "bbs.Bbs" </script>
-<script> page import = "java.util.ArrayList" </script>
-
 <html>
 <head>
 <title>WebDongSaNy</title>
@@ -48,7 +43,7 @@
 		<div id="main">
 			<div class="container">
 				<div class="row main-row">
-					<div class="col-3 col-12-medium">
+					<div class="col-2 col-12-medium">
 
 						<section>
 							<h2>커뮤니티</h2>
@@ -62,11 +57,49 @@
 							</ul>
 						</section>
 					</div>
-					<div class="col-9 col-9-medium imp-medium">
+					<div class="col-10 col-9-medium imp-medium container">
 						<section class="middle-content">
-							<h2>동물 게시판</h2>
-							<p>동물 관련 글을 올리는 게시판입니다.</p>
+							<h2>글 쓰기</h2>
 						</section>
+						<table>
+							<form name="BoardWriteForm" method="post"
+								action="Board_Write_action.jsp"
+								onsubmit="return boardWriteCheck();">
+								<colgroup>
+									<col width="20%">
+									<col width="80%">
+								</colgroup>
+								<div class="container">
+									<div class="row">
+										<form method="post" action="writeAction.jsp">
+											<table class="table table-striped"
+												style="text-align: center; border: 1px solid #dddddd">
+												<thead>
+													<tr>
+														<th colspan="2"
+															style="background-color: #eeeeee; text-align: center;">게시판
+															글쓰기 양식</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="text" class="form-control"
+															placeholder="글 제목" name="bbsTitle" maxlength="50"></td>
+													</tr>
+													<tr>
+														<td><textarea class="form-control" placeholder="글 내용"
+																name="bbsContent" maxlength="2048"
+																style="height: 350px;"></textarea></td>
+													</tr>
+												</tbody>
+											</table>
+											<input type="submit" class="btn btn-primary pull-right"
+												value="글쓰기">
+										</form>
+									</div>
+								</div>
+							</form>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -95,6 +128,17 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery-3.1.1.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script type="text/javascript">
+                function goUrl(url){
+                    location.href=url;
+                }
+                function boardWriteCheck(){
+                    var form = document.BoardWriteForm;
+                    return true;
+                }
+            </script>
 
 </body>
 </html>
