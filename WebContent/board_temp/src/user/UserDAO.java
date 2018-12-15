@@ -1,11 +1,9 @@
 package user;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 
 public class UserDAO {
 
@@ -15,9 +13,9 @@ public class UserDAO {
 	
 	public UserDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/bbs?serverTimezone=UTC";
+			String dbURL = "jdbc:mysql://localhost:3306/BBS";
 			String dbID = "root";
-			String dbPassword = "kgu123";
+			String dbPassword = "root";
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
 			
