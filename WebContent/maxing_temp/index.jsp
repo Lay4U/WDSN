@@ -14,9 +14,9 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/animate.css"/>
-<link rel="stylesheet" href="assets/css/custom.css"/>
-<link rel="stylesheet" href="assets/css/bootstrap.css"/>
+<link rel="stylesheet" href="assets/css/animate.css" />
+<link rel="stylesheet" href="assets/css/custom.css" />
+<link rel="stylesheet" href="assets/css/bootstrap.css" />
 </head>
 <body>
 	<div id="page-wrapper">
@@ -30,14 +30,12 @@
 							<h1>
 								<a href="index.jsp" id="logo"></a>
 							</h1>
-                                    <nav id="nav" class="navbar-brand">
-                                        <a href="index.jsp" class="current-page-item">홈</a>
-                                        <a href="total_search.jsp">통합검색</a>
-                                        <a href="youtube_rcmd.jsp">유튜브 추천</a>
-                                        <a href="community.jsp">커뮤니티</a>
-                                        <a href="ranking.jsp">랭킹</a>
-                                        <a href="login.jsp">로그인</a>
-                                    </nav>
+							<nav id="nav" class="navbar-brand">
+								<a href="index.jsp" class="current-page-item">홈</a> <a
+									href="total_search.jsp">통합검색</a> <a href="youtube_rcmd.jsp">유튜브
+									추천</a> <a href="community.jsp">커뮤니티</a> <a href="ranking.jsp">랭킹</a>
+								<a href="login.jsp">로그인</a>
+							</nav>
 						</header>
 					</div>
 				</div>
@@ -71,19 +69,25 @@
 
 						<section>
 							<h2>검색</h2>
-							<form name=form1 action="https://www.google.co.kr/search?" target="_blank" method=get>
-                                <input class="input" type="text" name="query" value="" placeholder="Google Search">
-                                <button class="button-google">　　　 　</button>
-                            </form>
-                            <form name=form1 action="https://search.naver.com/search.naver?" target="_blank" method=get>
-                                <input class="input" type="text" name="query" value="" placeholder="Naver Search">
-                                <button class="button-naver">　 　　 　</button>
-                            </form>
-                            <form name=form1 action="https://search.daum.net/search?" target="_blank" method=get>
-                                <input class="input" type="text" name="q" value="" placeholder="Daum Search">
-                                <button class="button-daum">　　 　</button>
-                            </form>
-                        </section>
+							<form name=form1 action="https://www.google.co.kr/search?"
+								target="_blank" method=get>
+								<input class="input" type="text" name="query" value=""
+									placeholder="Google Search">
+								<button class="button-google"></button>
+							</form>
+							<form name=form1 action="https://search.naver.com/search.naver?"
+								target="_blank" method=get>
+								<input class="input" type="text" name="query" value=""
+									placeholder="Naver Search">
+								<button class="button-naver"></button>
+							</form>
+							<form name=form1 action="https://search.daum.net/search?"
+								target="_blank" method=get>
+								<input class="input" type="text" name="q" value=""
+									placeholder="Daum Search">
+								<button class="button-daum"></button>
+							</form>
+						</section>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 
@@ -284,7 +288,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
 
 </body>
 </html>

@@ -13,10 +13,10 @@ public class BbsDAO {
 	
 	public BbsDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/bbs?serverTimezone=UTC";
+			String dbURL = "jdbc:mysql://localhost:3306/bbs?serverTimezone=UTC&autoReconnect=true&useSSL=false";
 			String dbID = "root";
 			String dbPassword = "kgu123";
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
 			
 		} catch (Exception e) {
