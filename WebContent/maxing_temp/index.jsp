@@ -62,6 +62,7 @@
 		</div>
 
 		<!-- Main -->
+		<embed height="200" width="90%" src="http://www.gagalive.kr/livechat1.swf?chatroom=WDSN"></embed>
 		<div id="main">
 			<div class="container">
 				<div class="row main-row">
