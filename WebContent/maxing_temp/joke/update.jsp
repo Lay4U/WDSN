@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width", initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
-<title>JSP 게시판 웹 사이트</title>
+<title>WebonDemandServiceNecessary</title>
 </head>
 <body>
 	<% 
@@ -33,7 +33,7 @@
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('유효하지 않은 글입니다.')");
-			script.println("location.href = 'bbs.jsp'");
+			script.println("location.href = 'joke.jsp'");
 			script.println("</script>");
 		}
 		Bbs bbs = new BbsDAO3().getBbs(bbsID);
@@ -41,7 +41,7 @@
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('권한이 없습니다.')");
-			script.println("location.href = 'bbs.jsp'");
+			script.println("location.href = 'joke.jsp'");
 			script.println("</script>");
 		}
 	%>
@@ -54,12 +54,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="main.jsp">JSP 게시판 웹 사이트</a>
+			<a class="navbar-brand" href="../index.jsp">WebonDemandServiceNecessary</a>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a href="main.jsp">메인</a></li>
-				<li class="active"><a href="bbs.jsp">게시판</a></li>
+				<li><a href="../index.jsp">메인</a></li>
+				<li class="active"><a href="joke.jsp">게시판</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">

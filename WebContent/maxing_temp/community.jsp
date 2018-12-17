@@ -9,7 +9,7 @@
 -->
 <html>
 	<head>
-		<title>WebonDemandServiceNnecessary</title>
+		<title>WebonDemandServiceNecessary</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -51,11 +51,11 @@
 									<h2>커뮤니티</h2>
 									<ul class="link-list">
 										<li><a href="community.jsp">공지사항</a></li>
-										<li><a href="game.jsp">게임 게시판</a></li>
-										<li><a href="animal.jsp">동물 게시판</a></li>
-										<li><a href="joke.jsp">유머 게시판</a></li>
-										<li><a href="sport.jsp">스포츠 게시판</a></li>
-										<li><a href="public.jsp">자유 게시판</a></li>
+										<li><a href="game/game.jsp">게임 게시판</a></li>
+										<li><a href="animal/animal.jsp">동물 게시판</a></li>
+										<li><a href="joke/joke.jsp">유머 게시판</a></li>
+										<li><a href="sport/sport.jsp">스포츠 게시판</a></li>
+										<li><a href="public/public.jsp">자유 게시판</a></li>
 									</ul>
 								</section>
 							</div>

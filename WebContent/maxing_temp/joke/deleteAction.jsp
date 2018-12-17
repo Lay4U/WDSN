@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JSP 게시판 웹 사이트</title>
+<title>WebonDemandServiceNecessary</title>
 </head>
 <body>
 	<%
@@ -32,7 +32,7 @@
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('유효하지 않은 글입니다.')");
-			script.println("location.href = 'bbs.jsp'");
+			script.println("location.href = 'joke.jsp'");
 			script.println("</script>");
 		}
 		Bbs bbs = new BbsDAO3().getBbs(bbsID);
@@ -40,7 +40,7 @@
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('권한이 없습니다.')");
-			script.println("location.href = 'bbs.jsp'");
+			script.println("location.href = 'joke.jsp'");
 			script.println("</script>");
 		} else {
 			BbsDAO3 BbsDAO3 = new BbsDAO3();
@@ -54,7 +54,7 @@
 			} else {
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
-				script.println("location.href = 'bbs.jsp'");
+				script.println("location.href = 'joke.jsp'");
 				script.println("</script>");
 			}
 		}

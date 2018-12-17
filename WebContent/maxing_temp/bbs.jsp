@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width", initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
-<title>WebonDemandServiceNnecessary</title>
+<title>WebonDemandServiceNecessary</title>
 <style type="text/css">
 	a, a:hover {
 		color: #000000;
@@ -40,7 +40,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="index.jsp">WebonDemandServiceNnecessary</a>
+			<a class="navbar-brand" href="index.jsp">WebonDemandServiceNecessary</a>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
@@ -110,11 +110,11 @@
 			<%
 				if(pageNumber != 1) {
 			%>
-				<a href = "community.jsp?pageNumber=<%=pageNumber - 1 %>" class="btn btn-success btn-arraw-left">이전</a>
+				<a href = "bbs.jsp?pageNumber=<%=pageNumber - 1 %>" class="btn btn-success btn-arraw-left">이전</a>
 			<%
 				} if(bbsDAO.nextPage(pageNumber + 1)) {
 			%>
-				<a href = "community.jsp?pageNumber=<%=pageNumber + 1 %>" class="btn btn-success btn-arraw-left">다음</a>
+				<a href = "bbs.jsp?pageNumber=<%=pageNumber + 1 %>" class="btn btn-success btn-arraw-left">다음</a>
 			<%
 				}
 			%>

@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JSP 게시판 웹 사이트</title>
+<title>WebonDemandServiceNecessary</title>
 </head>
 <body>
 	<%
@@ -43,7 +43,7 @@
 				} else {
 					PrintWriter script = response.getWriter();
 					script.println("<script>");
-					script.println("location.href = 'bbs.jsp'");
+					script.println("location.href = 'game.jsp'");
 					script.println("</script>");
 				}
 			}

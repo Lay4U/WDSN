@@ -7,14 +7,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JSP 게시판 웹 사이트</title>
+<title>WebonDemandServiceNecessary</title>
 </head>
 <body>
 	<%
 		session.invalidate();
 	%>
 	<script>
-		location.href = 'main.jsp';
+		location.href = '../index.jsp';
 	</script>
 </body>
 </html>

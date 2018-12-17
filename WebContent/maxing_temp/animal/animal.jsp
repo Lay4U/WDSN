@@ -14,7 +14,7 @@
 
 <html>
 <head>
-<title>WebonDemandServiceNnecessary</title>
+<title>WebonDemandServiceNecessary</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -33,12 +33,12 @@
 
 						<header id="header">
 							<h1>
-								<a href="index.jsp" id="logo"></a>
+								<a href="../index.jsp" id="logo"></a>
 							</h1>
 							<nav id="nav" class="navbar-brand">
-								<a href="index.jsp">홈</a> <a href="total_search.jsp">통합검색</a> <a
-									href="youtube_rcmd.jsp">유튜브 추천</a> <a href="community.jsp"
-									class="current-page-item">커뮤니티</a> <a href="ranking.jsp">랭킹</a>
+								<a href="../index.jsp">홈</a> <a href="total_search.jsp">통합검색</a> <a
+									href="youtube_rcmd.jsp">유튜브 추천</a> <a href="../community.jsp"
+									class="current-page-item">커뮤니티</a> <a href="../ranking.jsp">랭킹</a>
 								<a href="login.jsp">로그인</a>
 							</nav>
 						</header>
@@ -56,12 +56,12 @@
 						<section>
 							<h2>커뮤니티</h2>
 							<ul class="link-list">
-								<li><a href="community.jsp">공지사항</a></li>
-								<li><a href="game.jsp">게임 게시판</a></li>
-								<li><a href="animal.jsp">동물 게시판</a></li>
-								<li><a href="joke.jsp">유머 게시판</a></li>
-								<li><a href="sport.jsp">스포츠 게시판</a></li>
-								<li><a href="public.jsp">자유 게시판</a></li>
+								<li><a href="../community.jsp">공지사항</a></li>
+								<li><a href="../game/game.jsp">게임 게시판</a></li>
+								<li><a href="../animal/animal.jsp">동물 게시판</a></li>
+								<li><a href="../joke/joke.jsp">유머 게시판</a></li>
+								<li><a href="../sport/sport.jsp">스포츠 게시판</a></li>
+								<li><a href="../public/public.jsp">자유 게시판</a></li>
 							</ul>
 						</section>
 					</div>
@@ -115,13 +115,13 @@
 								<%
 									if (pageNumber != 1) {
 								%>
-								<a href="community.jsp?pageNumber=<%=pageNumber - 1%>"
+								<a href="animal.jsp?pageNumber=<%=pageNumber - 1%>"
 									class="btn btn-success btn-arraw-left">이전</a>
 								<%
 									}
 									if (BbsDAO2.nextPage(pageNumber + 1)) {
 								%>
-								<a href="community.jsp?pageNumber=<%=pageNumber + 1%>"
+								<a href="animal.jsp?pageNumber=<%=pageNumber + 1%>"
 									class="btn btn-success btn-arraw-left">다음</a>
 								<%
 									}
