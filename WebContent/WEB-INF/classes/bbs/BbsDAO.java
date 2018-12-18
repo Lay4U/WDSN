@@ -9,10 +9,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class BbsDAO {
-	
+
 	private Connection conn;
 	private ResultSet rs;
-	
+
 	public BbsDAO() {
 		try {
 			String dbURL = "jdbc:mysql://localhost:3306/bbs?serverTimezone=UTC&autoReconnect=true&useSSL=false";
@@ -20,12 +20,12 @@ public class BbsDAO {
 			String dbPassword = "kgu123";
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public String getDate() {
 		String SQL = "select now()";
 		try {
@@ -37,9 +37,9 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return ""; //데이터베이스 오류
+		return ""; // 데이터베이스 오류
 	}
-	
+
 	public int getNext() {
 		String SQL = "select bbsID from BBS order by bbsID desc";
 		try {
@@ -48,13 +48,13 @@ public class BbsDAO {
 			if (rs.next()) {
 				return rs.getInt(1) + 1;
 			}
-			return 1; //첫 번째 게시물인 경우
+			return 1; // 첫 번째 게시물인 경우
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; //데이터베이스 오류
+		return -1; // 데이터베이스 오류
 	}
-	
+
 	public int write(String bbsTitle, String userID, String bbsContent) {
 		String SQL = "insert into bbs values(?, ?, ?, ?, ?, ?)";
 		try {
@@ -69,9 +69,9 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; //데이터베이스 오류
+		return -1; // 데이터베이스 오류
 	}
-	
+
 	public ArrayList<Bbs> getList(int pageNumber) {
 		String SQL = "select * from BBS where bbsID < ? and bbsAvailable = 1 order by bbsID desc limit 10";
 		ArrayList<Bbs> list = new ArrayList<Bbs>();
@@ -92,9 +92,9 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return list; //데이터베이스 오류
+		return list; // 데이터베이스 오류
 	}
-	
+
 	public boolean nextPage(int pageNumber) {
 		String SQL = "select * from BBS where bbsID < ? and bbsAvailable = 1";
 		try {
@@ -107,9 +107,9 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return false; //데이터베이스 오류
+		return false; // 데이터베이스 오류
 	}
-	
+
 	public Bbs getBbs(int bbsID) {
 		String SQL = "select * from bbs where bbsID = ?";
 		try {
@@ -127,11 +127,11 @@ public class BbsDAO {
 				return bbs;
 			}
 		} catch (Exception e) {
-			e.printStackTrace();	
+			e.printStackTrace();
 		}
 		return null;
 	}
-	
+
 	public int update(int bbsID, String bbsTitle, String bbsContent) {
 		String SQL = "update bbs set bbsTitle = ? , bbsContent =? where bbsID = ?";
 		try {
@@ -143,9 +143,9 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; //데이터베이스 오류
+		return -1; // 데이터베이스 오류
 	}
-	
+
 	public int delete(int bbsID) {
 		String SQL = "update bbs set bbsAvailable = 0 where bbsID = ?";
 		try {
@@ -155,18 +155,24 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; //데이터베이스 오류
+		return -1; // 데이터베이스 오류
 	}
-	
-	public void viewPoint(String userid) throws SQLException
-	{
 
+	public void viewPoint(String userid) throws SQLException {
 		Statement st = null;
 		st = conn.createStatement();
 		String sql = "use bbs";
 		st.execute(sql);
-		sql = "update user set userPoint=userPoint+2 where userID="+"\""+userid+"\"";
+		sql = "update user set userPoint=userPoint+2 where userID=" + "\"" + userid + "\"";
 		st.execute(sql);
-		
+	}
+	
+	public void WritePoint(String userid) throws SQLException {
+		Statement st = null;
+		st = conn.createStatement();
+		String sql = "use bbs";
+		st.execute(sql);
+		sql = "update user set userPoint=userPoint+10 where userID=" + "\"" + userid + "\"";
+		st.execute(sql);
 	}
 }

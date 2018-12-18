@@ -158,15 +158,21 @@ public class BbsDAO6 {
 		return -1; //데이터베이스 오류
 	}
 	
-	public void viewPoint(String userid) throws SQLException
-	{
-
+	public void viewPoint(String userid) throws SQLException{
 		Statement st = null;
 		st = conn.createStatement();
 		String sql = "use bbs";
 		st.execute(sql);
 		sql = "update user set userPoint=userPoint+2 where userID="+"\""+userid+"\"";
 		st.execute(sql);
-		
+	}
+	
+	public void WritePoint(String userid) throws SQLException {
+		Statement st = null;
+		st = conn.createStatement();
+		String sql = "use bbs";
+		st.execute(sql);
+		sql = "update user set userPoint=userPoint+10 where userID=" + "\"" + userid + "\"";
+		st.execute(sql);
 	}
 }

@@ -33,6 +33,7 @@
 				script.println("</script>");
 			} else {
 				BbsDAO4 BbsDAO4 = new BbsDAO4();
+				BbsDAO4.WritePoint(userID);
 				int result = BbsDAO4.write(bbs.getBbsTitle(), userID, bbs.getBbsContent());
 				if (result == -1) {
 					PrintWriter script = response.getWriter();
