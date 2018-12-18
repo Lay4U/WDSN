@@ -12,7 +12,7 @@
 -->
 <html>
 <head>
-<title>WebonDemandServiceNecessary</title>
+<title>WebonDemandServiceNeed</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -64,10 +64,8 @@
 					</div>
 					<div class="col-9 col-9-medium imp-medium">
 						<section class="middle-content">
-							<h2>공지사항</h2>
-							<p>욕하지 맙시다.</p>
-							<p>싸우지 맙시다.</p>
-							<p>광고/도배하지 맙시다.</p>
+							<h2>게임 게시판</h2>
+							<p>게임 관련 글을 올리는 게시판입니다.</p>
 						</section>
 						<!-- Start forum -->
 						<%

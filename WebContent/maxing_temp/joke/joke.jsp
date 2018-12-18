@@ -12,7 +12,7 @@
 -->
 <html>
 <head>
-<title>WebonDemandServiceNecessary</title>
+<title>WebonDemandServiceNeed</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -76,6 +76,7 @@
 					<div class="col-9 col-9-medium imp-medium">
 						<section class="middle-content">
 							<h2>유머 게시판</h2>
+							<p>유머 관련 글을 올리는 게시판입니다.</p>
 						</section>
 						<!-- Start forum -->
 						<div class="container">
