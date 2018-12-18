@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class BbsDAO6 {
@@ -154,5 +156,17 @@ public class BbsDAO6 {
 			e.printStackTrace();
 		}
 		return -1; //데이터베이스 오류
+	}
+	
+	public void viewPoint(String userid) throws SQLException
+	{
+
+		Statement st = null;
+		st = conn.createStatement();
+		String sql = "use bbs";
+		st.execute(sql);
+		sql = "update user set userPoint=userPoint+2 where userID="+"\""+userid+"\"";
+		st.execute(sql);
+		
 	}
 }

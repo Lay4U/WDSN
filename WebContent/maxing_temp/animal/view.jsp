@@ -30,7 +30,8 @@
 			script.println("</script>");
 		}
 		Bbs bbs = new BbsDAO2().getBbs(bbsID);
-		
+		BbsDAO2 BbsDAO2 = new BbsDAO2();
+		BbsDAO2.viewPoint(bbs.getUserID());
 	%>
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">

@@ -13,24 +13,25 @@
 <title>WebonDemandServiceNeed</title>
 </head>
 <body>
-	<% 
+	<%
 		String userID = null;
-		if (session.getAttribute("userID") != null) {
-			userID = (String)session.getAttribute("userID");
-		}
-		int bbsID = 0;
-		if (request.getParameter("bbsID") != null) {
-			bbsID = Integer.parseInt(request.getParameter("bbsID"));
-		}
-		if (bbsID == 0) {
-			PrintWriter script = response.getWriter();
-			script.println("<script>");
-			script.println("alert('유효하지 않은 글입니다.')");
-			script.println("location.href = 'game.jsp'");
-			script.println("</script>");
-		}
-		Bbs bbs = new BbsDAO4().getBbs(bbsID);
-		
+			if (session.getAttribute("userID") != null) {
+		userID = (String)session.getAttribute("userID");
+			}
+			int bbsID = 0;
+			if (request.getParameter("bbsID") != null) {
+		bbsID = Integer.parseInt(request.getParameter("bbsID"));
+			}
+			if (bbsID == 0) {
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('유효하지 않은 글입니다.')");
+		script.println("location.href = 'game.jsp'");
+		script.println("</script>");
+			}
+			Bbs bbs = new BbsDAO4().getBbs(bbsID);
+		BbsDAO4 BbsDAO4 = new BbsDAO4();
+		BbsDAO4.viewPoint(bbs.getUserID());
 	%>
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">
