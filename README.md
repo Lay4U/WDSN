@@ -1,7 +1,7 @@
 # 커뮤니티 게시판
 ## 웹서비스 설계
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger) 
 
 웹 서비스 설계를 위해 JSP를 이용하여 커뮤니티 게시판을 만든 프로젝트.
 
